@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Répertoires d'inclusion
 include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(${PROJECT_SOURCE_DIR}/include/SDL3)
 
 # Définir les sources pour la bibliothèque (sans utiliser GLOB_RECURSE pour un meilleur contrôle)
 set(LIB_SOURCES
@@ -68,12 +69,22 @@ set(LIB_HEADERS
         include/utils/file_utils.h
 )
 
+# Ajouter les répertoires d'inclusion pour SDL3
+include_directories(${PROJECT_SOURCE_DIR}/include/SDL3)
+
+# Ajouter les bibliothèques SDL3
+set(SDL3_LIBS
+        ${PROJECT_SOURCE_DIR}/lib/libSDL2_mixer.a
+        ${PROJECT_SOURCE_DIR}/lib/libSDL3.dll.a
+        ${PROJECT_SOURCE_DIR}/lib/libSDL3_ttf.dll.a
+)
+
 # Création de la bibliothèque
 add_library(Music_TestLib ${LIB_SOURCES} ${LIB_HEADERS})
 
 # Compilation de l'exécutable principal
 add_executable(Music_Test src/main.cpp)
-target_link_libraries(Music_Test Music_TestLib)
+target_link_libraries(Music_Test Music_TestLib ${SDL3_LIBS})
 
 # Configuration des tests
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/tests/CMakeLists.txt)
