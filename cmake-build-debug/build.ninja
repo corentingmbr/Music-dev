@@ -182,6 +182,13 @@ build CMakeFiles/Music_TestLib.dir/src/utils/file_utils.cpp.obj: CXX_COMPILER__M
   OBJECT_DIR = CMakeFiles\Music_TestLib.dir
   OBJECT_FILE_DIR = CMakeFiles\Music_TestLib.dir\src\utils
 
+build CMakeFiles/Music_TestLib.dir/devfile.cpp.obj: CXX_COMPILER__Music_TestLib_unscanned_Debug C$:/Users/coren/OneDrive/Documents/A_CIR2/PROJET/PROJET1/Music-Test/devfile.cpp || cmake_object_order_depends_target_Music_TestLib
+  DEP_FILE = CMakeFiles\Music_TestLib.dir\devfile.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/coren/OneDrive/Documents/A_CIR2/PROJET/PROJET1/Music-Test/include -IC:/Users/coren/OneDrive/Documents/A_CIR2/PROJET/PROJET1/Music-Test/include/SDL3
+  OBJECT_DIR = CMakeFiles\Music_TestLib.dir
+  OBJECT_FILE_DIR = CMakeFiles\Music_TestLib.dir
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target Music_TestLib
@@ -190,7 +197,7 @@ build CMakeFiles/Music_TestLib.dir/src/utils/file_utils.cpp.obj: CXX_COMPILER__M
 #############################################
 # Link the static library libMusic_TestLib.a
 
-build libMusic_TestLib.a: CXX_STATIC_LIBRARY_LINKER__Music_TestLib_Debug CMakeFiles/Music_TestLib.dir/src/models/Instrument.cpp.obj CMakeFiles/Music_TestLib.dir/src/models/Piano.cpp.obj CMakeFiles/Music_TestLib.dir/src/models/Xylophone.cpp.obj CMakeFiles/Music_TestLib.dir/src/models/VideoGame.cpp.obj CMakeFiles/Music_TestLib.dir/src/models/Score.cpp.obj CMakeFiles/Music_TestLib.dir/src/models/Note.cpp.obj CMakeFiles/Music_TestLib.dir/src/views/View.cpp.obj CMakeFiles/Music_TestLib.dir/src/views/InstrumentSelectionView.cpp.obj CMakeFiles/Music_TestLib.dir/src/views/PianoView.cpp.obj CMakeFiles/Music_TestLib.dir/src/views/XylophoneView.cpp.obj CMakeFiles/Music_TestLib.dir/src/views/VideoGameView.cpp.obj CMakeFiles/Music_TestLib.dir/src/controllers/Controller.cpp.obj CMakeFiles/Music_TestLib.dir/src/controllers/InstrumentController.cpp.obj CMakeFiles/Music_TestLib.dir/src/controllers/ScoreController.cpp.obj CMakeFiles/Music_TestLib.dir/src/utils/AudioGenerator.cpp.obj CMakeFiles/Music_TestLib.dir/src/utils/FileManager.cpp.obj CMakeFiles/Music_TestLib.dir/src/utils/RandomMelodyGenerator.cpp.obj CMakeFiles/Music_TestLib.dir/src/utils/audio_utils.cpp.obj CMakeFiles/Music_TestLib.dir/src/utils/file_utils.cpp.obj
+build libMusic_TestLib.a: CXX_STATIC_LIBRARY_LINKER__Music_TestLib_Debug CMakeFiles/Music_TestLib.dir/src/models/Instrument.cpp.obj CMakeFiles/Music_TestLib.dir/src/models/Piano.cpp.obj CMakeFiles/Music_TestLib.dir/src/models/Xylophone.cpp.obj CMakeFiles/Music_TestLib.dir/src/models/VideoGame.cpp.obj CMakeFiles/Music_TestLib.dir/src/models/Score.cpp.obj CMakeFiles/Music_TestLib.dir/src/models/Note.cpp.obj CMakeFiles/Music_TestLib.dir/src/views/View.cpp.obj CMakeFiles/Music_TestLib.dir/src/views/InstrumentSelectionView.cpp.obj CMakeFiles/Music_TestLib.dir/src/views/PianoView.cpp.obj CMakeFiles/Music_TestLib.dir/src/views/XylophoneView.cpp.obj CMakeFiles/Music_TestLib.dir/src/views/VideoGameView.cpp.obj CMakeFiles/Music_TestLib.dir/src/controllers/Controller.cpp.obj CMakeFiles/Music_TestLib.dir/src/controllers/InstrumentController.cpp.obj CMakeFiles/Music_TestLib.dir/src/controllers/ScoreController.cpp.obj CMakeFiles/Music_TestLib.dir/src/utils/AudioGenerator.cpp.obj CMakeFiles/Music_TestLib.dir/src/utils/FileManager.cpp.obj CMakeFiles/Music_TestLib.dir/src/utils/RandomMelodyGenerator.cpp.obj CMakeFiles/Music_TestLib.dir/src/utils/audio_utils.cpp.obj CMakeFiles/Music_TestLib.dir/src/utils/file_utils.cpp.obj CMakeFiles/Music_TestLib.dir/devfile.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\Music_TestLib.dir
   POST_BUILD = cd .

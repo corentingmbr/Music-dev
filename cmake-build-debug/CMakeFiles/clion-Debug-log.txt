@@ -1,6 +1,6 @@
 "C:\Program Files\JetBrains\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\coren\OneDrive\Documents\A_CIR2\PROJET\PROJET1\Music-Test -B C:\Users\coren\OneDrive\Documents\A_CIR2\PROJET\PROJET1\Music-Test\cmake-build-debug
 -- Project 'Music_Test' configured with C++20
 -- Build type: Debug
--- Configuring done (0.2s)
--- Generating done (0.0s)
+-- Configuring done (0.5s)
+-- Generating done (0.1s)
 -- Build files have been written to: C:/Users/coren/OneDrive/Documents/A_CIR2/PROJET/PROJET1/Music-Test/cmake-build-debug

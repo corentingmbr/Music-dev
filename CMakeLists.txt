@@ -67,6 +67,7 @@ set(LIB_HEADERS
         include/utils/RandomMelodyGenerator.h
         include/utils/audio_utils.h
         include/utils/file_utils.h
+        devfile.cpp
 )
 
 # Ajouter les répertoires d'inclusion pour SDL3
