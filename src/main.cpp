@@ -14,8 +14,8 @@
 // Classe principale qui hérite de Controller
 class PianoAppController : public Controller {
 private:
-    Piano* piano;
-    PianoView* pianoView;
+    Piano *piano;
+    PianoView *pianoView;
 
 public:
     PianoAppController(int windowWidth, int windowHeight) : Controller() {
@@ -51,16 +51,16 @@ public:
         }
     }
 
-    void render(SDL_Renderer* renderer, int windowWidth, int windowHeight) override {
+    void render(SDL_Renderer *renderer, int windowWidth, int windowHeight) override {
         // Dessiner la surface de travail (background)
         SDL_SetRenderDrawColor(renderer, 220, 220, 220, 255);
-        SDL_FRect workspace = {0, 0, (float)windowWidth, (float)windowHeight};
+        SDL_FRect workspace = {0, 0, (float) windowWidth, (float) windowHeight};
         SDL_RenderFillRect(renderer, &workspace);
 
         // Barre du haut
         SDL_Color brownColor = {90, 60, 55, 255};
         SDL_SetRenderDrawColor(renderer, brownColor.r, brownColor.g, brownColor.b, brownColor.a);
-        SDL_FRect topBar = {0, 0, (float)windowWidth, 129.0f};
+        SDL_FRect topBar = {0, 0, (float) windowWidth, 129.0f};
         SDL_RenderFillRect(renderer, &topBar);
 
         // Dessiner les boutons
@@ -88,7 +88,8 @@ public:
 
         // Zone d'affichage pour le nom de fichier
         SDL_SetRenderDrawColor(renderer, 50, 50, 50, 255);
-        SDL_FRect fileNameDisplay = {pianoPanel.x + pianoPanel.w * 0.25f, pianoPanel.y + 25, pianoPanel.w * 0.5f, pianoPanel.h - 50};
+        SDL_FRect fileNameDisplay = {pianoPanel.x + pianoPanel.w * 0.25f, pianoPanel.y + 25, pianoPanel.w * 0.5f,
+                                     pianoPanel.h - 50};
         SDL_RenderFillRect(renderer, &fileNameDisplay);
 
         // Zones d'affichage pour les chiffres
@@ -104,9 +105,9 @@ public:
     }
 };
 
-int main(int argc, char* argv[]) {
-    // Initialiser SDL
-    if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS) < 0) {
+int main(int argc, char *argv[]) {
+    // Initializer SDL
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS) < 0) {
         SDL_Log("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
         return -1;
     }
@@ -115,15 +116,15 @@ int main(int argc, char* argv[]) {
     int windowWidth = 1440;
     int windowHeight = 1024;
 
-    SDL_Window* window = SDL_CreateWindow("Piano Interface", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE);
-    if(!window) {
+    SDL_Window *window = SDL_CreateWindow("Piano Interface", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE);
+    if (!window) {
         SDL_Log("Window could not be created! SDL_Error: %s\n", SDL_GetError());
         SDL_Quit();
         return -1;
     }
 
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, NULL);
-    if(!renderer) {
+    SDL_Renderer *renderer = SDL_CreateRenderer(window, NULL);
+    if (!renderer) {
         SDL_Log("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
         SDL_DestroyWindow(window);
         SDL_Quit();
@@ -137,17 +138,15 @@ int main(int argc, char* argv[]) {
     bool quit = false;
     SDL_Event event;
 
-    while(!quit) {
-        while(SDL_PollEvent(&event)) {
-            if(event.type == SDL_EVENT_QUIT) {
+    while (!quit) {
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_EVENT_QUIT) {
                 quit = true;
-            }
-            else if(event.type == SDL_EVENT_KEY_DOWN) {
-                if(event.key.key == SDLK_ESCAPE) {
+            } else if (event.type == SDL_EVENT_KEY_DOWN) {
+                if (event.key.key == SDLK_ESCAPE) {
                     quit = true;
                 }
-            }
-            else if(event.type == SDL_EVENT_MOUSE_BUTTON_DOWN) {
+            } else if (event.type == SDL_EVENT_MOUSE_BUTTON_DOWN) {
                 float mouseX, mouseY;
                 SDL_GetMouseState(&mouseX, &mouseY);
 

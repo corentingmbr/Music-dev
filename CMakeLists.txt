@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
-project(Music_Test VERSION 1.0)
+project(MusicaLau VERSION 1.0)
 
 # Spécifier la version du C++
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Répertoires d'inclusion
@@ -81,16 +81,16 @@ set(SDL3_LIBS
 )
 
 # Création de la bibliothèque
-add_library(Music_TestLib ${LIB_SOURCES} ${LIB_HEADERS})
+add_library(MusicaLauLib ${LIB_SOURCES} ${LIB_HEADERS})
 
 # Compilation de l'exécutable principal
-add_executable(Music_Test src/main.cpp)
-target_link_libraries(Music_Test Music_TestLib ${SDL3_LIBS})
+add_executable(MusicaLau src/main.cpp)
+target_link_libraries(MusicaLau MusicaLauLib ${SDL3_LIBS})
 
 # Configuration des tests
-if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/tests/CMakeLists.txt)
+if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/tests/CMakeLists.txt)
     add_subdirectory(tests)
-else()
+else ()
     # Créer un répertoire de tests vide si besoin
     file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/tests)
 
@@ -99,7 +99,7 @@ else()
             "# Tests Configuration\n\n# Ajoutez vos tests ici\n")
 
     add_subdirectory(tests)
-endif()
+endif ()
 
 # Création des répertoires d'assets s'ils n'existent pas
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/assets)
@@ -110,8 +110,8 @@ file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/assets/scores)
 file(COPY ${PROJECT_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR})
 
 # Définir la sortie de l'exécutable
-set_target_properties(Music_Test PROPERTIES
-        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+set_target_properties(MusicaLau PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin
 )
 
 # Messages de statut de configuration
