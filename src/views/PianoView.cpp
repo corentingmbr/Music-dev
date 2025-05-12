@@ -1,12 +1,14 @@
-//
-// Created by coren on 24/03/2025.
-//
+#include "../include/views/PianoView.h"
 
-#include "../../include/views/PianoView.h"
-#include <SDL3/SDL.h>
+PianoView::PianoView(Piano* piano) : piano(piano) {
+}
 
-//fonction pour dessinner un piano
-void drawPiano(SDL_Renderer* renderer, float x, float y, float w, float h) {
+void PianoView::render(SDL_Renderer* renderer) {
+    float x = piano->getX();
+    float y = piano->getY();
+    float w = piano->getWidth();
+    float h = piano->getHeight();
+
     // Fond blanc pour le clavier complet
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     SDL_FRect pianoBackground = {x, y, w, h};

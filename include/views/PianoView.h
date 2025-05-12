@@ -1,16 +1,12 @@
-//
-// Created by coren on 24/03/2025.
-//
-
-#ifndef MUSIC_TEST_PIANOVIEW_H
-#define MUSIC_TEST_PIANOVIEW_H
-
+#pragma once
+#include <SDL3/SDL.h>
+#include "../models/Piano.h"
 
 class PianoView {
+private:
+    Piano* piano;
 
+public:
+    PianoView(Piano* piano);
+    void render(SDL_Renderer* renderer);
 };
-
-
-
-
-#endif //MUSIC_TEST_PIANOVIEW_H
